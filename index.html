@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>Sneakers Store</title>
+  </head>
+
+  <body>
+    <main class="">
+      <div class="navbar">
+        <nav class="nav">
+          <span class="nav-toggle">menu</span>
+          <!-- <img class="nav-toggle" src="images/icon-menu.svg" alt="" /> -->
+          <ul class="nav-wrap">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="pagelogo"><img src="images/logo.svg" alt="Sneakers" /></div>
+        <div class="user">
+          <img class="user-cart" src="images/icon-cart.svg" alt="" />
+          <img class="user-avatar" src="images/image-avatar.png" alt="" />
+        </div>
+      </div>
+
+      <hr class="hr">
+      
+      <div class="product-flex">
+        <div class="product-wrap">
+          <img id="open" class="product-one" src="images/image-product-1.jpg" alt="" />
+          <div class="thumbnails">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" width="20%">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" width="20%">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" width="20%">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" width="20%">
+          </div>
+        </div>
+  
+        <div class="details">
+            <small class="company bold">Sneaker Company</small>
+            <h1 class="h1">Fall Limited Edition Sneakers</h1>
+            <p class="p">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand everything
+              the weather can offer.
+            </p>
+  
+            <div class="product-price bold">
+              <span class="product-dp">$125.00</span>
+              <span class="product-discount">50%</span>
+              <span class="product-cp">$250.00</span>
+            </div>
+            <div class="pq-wrap">
+              <div class="product-quantity">
+                <span class="quant-minus"
+                  ><img src="images/icon-minus.svg" alt=""
+                /></span>
+                <span class="quant bold">0</span>
+                <span class="quant-add"
+                  ><img src="images/icon-plus.svg" alt=""
+                /></span>
+              </div>
+              <button class="btn bold">
+                <img class="btn-cart" src="images/icon-cart-w.svg" alt="" />
+                <span class="btn-cta">Add to cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="modal" class="modal">
+        <div class="modal-backdrop">
+          <div class="modal-body">
+            <div class="modal-product">
+                <img class="close" src="images/icon-close.svg" alt="" id="close">
+              <img class="product-one" src="images/image-product-1.jpg" alt="">
+              <div class="thumbnails md-tnails">
+                <img src="images/image-product-1-thumbnail.jpg" alt="">
+                <img src="images/image-product-2-thumbnail.jpg" alt="">
+                <img src="images/image-product-3-thumbnail.jpg" alt="">
+                <img src="images/image-product-4-thumbnail.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script type="text/javascript">
+    var picOpen = document.getElementById('open');
+    var close = document.getElementById('close');
+    var modal = document.getElementById('modal');
+
+    picOpen.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = 'block';
+    });
+    
+    close.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = 'none';
+    });
+    </script>
+  </body>
+</html>
+
+
+
+<!-- My semantic html skills stilll has a mighty K-leg -->

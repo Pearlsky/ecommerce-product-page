@@ -1,0 +1,72 @@
+:root {
+  box-sizing: border-box;
+  --orange: hsl(26, 100%, 55%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  left: 35%;
+  right: 35%;
+}
+
+.picture-one {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.thumbnails > img + * {
+  margin-top: 0;
+}
+
+.thumbnails > img {
+  border-radius: 10px;
+  width: 20%;
+}
+
+.modal-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  align-self: flex-end;
+}
