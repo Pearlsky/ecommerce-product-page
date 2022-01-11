@@ -160,6 +160,7 @@ a {
   border-radius: 10px;
   box-shadow: 0.25em 1em 2em .5em hsl(25, 100%, 94%);
   color: hsl(25, 100%, 94%);
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,11 +191,13 @@ a {
 
 .thumbnails > img:hover {
   border: 2px solid hsl(26, 100%, 55%);
+  cursor: pointer;
 }
 
 .user-avatar:hover {
   border: 2px solid hsl(26, 100%, 55%);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Media  Queries */
