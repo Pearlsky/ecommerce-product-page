@@ -182,15 +182,15 @@ a {
   display: none;
 }
 
-.thumbnails > :nth-child(1) {
-  border: 2px solid hsl(26, 100%, 55%);
-}
-
 .modal {
   display: none;
 }
 
-/* Hover State */
+/* Hover States */
+
+.thumbnails > img:hover {
+  border: 2px solid hsl(26, 100%, 55%);
+}
 
 .user-avatar:hover {
   border: 2px solid hsl(26, 100%, 55%);
