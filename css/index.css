@@ -156,7 +156,9 @@ a {
 
 .btn {
   background-color: var(--orange);
+  border: none;
   border-radius: 10px;
+  box-shadow: 0.25em 1em 2em .5em hsl(25, 100%, 94%);
   color: hsl(25, 100%, 94%);
   display: flex;
   align-items: center;
@@ -180,9 +182,16 @@ a {
   display: none;
 }
 
+.thumbnails > :nth-child(1) {
+  border: 2px solid hsl(26, 100%, 55%);
+}
+
 .modal {
   display: none;
 }
+
+/* Hover State */
+
 
 /* Media  Queries */
 
