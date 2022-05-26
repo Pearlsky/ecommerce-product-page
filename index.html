@@ -18,17 +18,18 @@
     />
 
     <link rel="stylesheet" href="css/index.css" />
+    <script src="script.js" defer></script>
 
     <title>Sneakers Store</title>
   </head>
 
   <body>
-    <main class="">
+    <main id="main" class="">
       <div class="navbar">
         <nav class="nav">
           <span class="nav-toggle">menu</span>
           <!-- <img class="nav-toggle" src="images/icon-menu.svg" alt="" /> -->
-          <ul class="nav-wrap">
+          <ul class="nav-wrap hidden">
             <li><a href="#">Collections</a></li>
             <li><a href="#">Men</a></li>
             <li><a href="#">Women</a></li>
@@ -36,10 +37,46 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <div class="pagelogo"><img src="images/logo.svg" alt="Sneakers" /></div>
+        <div class="pagelogo"><a href="index.html"><img src="images/logo.svg" alt="Sneakers" /></a></div>
         <div class="user">
-          <img class="user-cart" src="images/icon-cart.svg" alt="" />
+          <div class="cartwidget">
+            <img id="user-cart" class="user-cart" src="images/icon-cart.svg" alt="" />
+            <p  id="widget" class="widget hidden">0</p>
+          </div>
           <img class="user-avatar" src="images/image-avatar.png" alt="" />
+
+          <section id="card" class="card hidden">
+            <div class="cardheader">
+              <h4>Cart</h4>
+            </div>
+
+            <div id="fullcart" class="cardbody hidden">
+              <div class="cardimage">
+                <img src="images/image-product-1-thumbnail.jpg" alt="" >
+              </div>
+
+              <div class="cardtext">
+                <p>Fall Limited Edition Sneak...</p>
+                <div>
+                  <span class="">$125.00</span>
+                  <span>x</span>
+                  <span id="cartquant" class="quant">0</span>
+                  <span id="cartprice" class="bold">0 </span>
+                </div>
+              </div>
+
+              <img class="carddelete" src="images/icon-delete.svg" alt="delete">
+            </div>
+
+            <div id="zerocart" class="emptycart">
+              <p class="bold">Your cart is empty</p>
+            </div>
+
+            <div id="checkout-wrap" class="checkout">
+              <button id="checkout" class="btn bold hidden">Checkout</button>
+            </div>
+
+          </section>
         </div>
       </div>
 
@@ -66,21 +103,21 @@
             </p>
   
             <div class="product-price bold">
-              <span class="product-dp">$125.00</span>
+              <span class="product-dp">$<span id="itemprice">125.00</span></span>
               <span class="product-discount">50%</span>
               <span class="product-cp">$250.00</span>
             </div>
             <div class="pq-wrap">
               <div class="product-quantity">
                 <span class="quant-minus"
-                  ><img src="images/icon-minus.svg" alt=""
+                  ><img id="minus" src="images/icon-minus.svg" alt=""
                 /></span>
-                <span class="quant bold">0</span>
+                <span id="quant" class="quant bold">0</span>
                 <span class="quant-add"
-                  ><img src="images/icon-plus.svg" alt=""
+                  ><img id="add" src="images/icon-plus.svg" alt=""
                 /></span>
               </div>
-              <button class="btn bold">
+              <button id="addtocart" class="btn btn-flex bold">
                 <img class="btn-cart" src="images/icon-cart-w.svg" alt="" />
                 <span class="btn-cta">Add to cart</span>
               </button>
@@ -112,21 +149,6 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <script type="text/javascript">
-    var picOpen = document.getElementById('open');
-    var close = document.getElementById('close');
-    var modal = document.getElementById('modal');
-
-    picOpen.addEventListener('click', function (event) {
-    event.preventDefault();
-    modal.style.display = 'block';
-    });
-    
-    close.addEventListener('click', function (event) {
-    event.preventDefault();
-    modal.style.display = 'none';
-    });
-    </script>
   </body>
 </html>
 
